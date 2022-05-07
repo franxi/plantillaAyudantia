@@ -1,5 +1,5 @@
 <!-- Sidebar -->
-<div id="sidebar-container" class="bg-primary">
+<div id="sidebar-container" class="bg-primary" >
             <div class="logo">
                 <h4 class="text-light font-weight-bold mb-0">INGENIERÍA DE SOFTWARE</h4>
             </div>
@@ -10,10 +10,10 @@
                 <a href="../" class="d-block text-light p-3 border-0"><i class="fas fa-users"></i>
                     Usuarios</a>
 
-                <a href="../" class="d-block text-light p-3 border-0"><i class="fas fa-drumstick-bite"></i>
-                    Arriendos</a>
+                <a href="../vistas/hu1_diariomural.php" class="d-block text-light p-3 border-0"><i class="fas fa-drumstick-bite"></i>
+                    Dirario mural</a>
 
-                <a href="../" class="d-block text-light p-3 border-0"><i class="fas fa-drumstick-bite"></i>
+                <!-- <a href="../" class="d-block text-light p-3 border-0"><i class="fas fa-drumstick-bite"></i>
                 Contratos</a>
 
                 <a href="../" class="d-block text-light p-3 border-0"><i class="fas fa-drumstick-bite"></i>
@@ -40,7 +40,7 @@
                     Perfil</a>
 
                 <a href="../" class="d-block text-light p-3 border-0"><i class="fas fa-sliders-h"></i>
-                    Configuración</a>
+                    Configuración</a> -->
             </div>
         </div>
         <!-- Fin sidebar -->
