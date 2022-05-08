@@ -18,7 +18,7 @@
             <!-- Fin Navbar -->
 
             <!-- Page Content -->
-            <div id="content" class="bg-grey w-100">
+            <div id="content" class="bg-light w-100">
 
                 <section class="bg-light py-3">
                     <div class="container">
@@ -30,23 +30,64 @@
                         </div>
                     </div>
                 </section>
-
-                <section class="py-3" style="background-color: red;">
-                    <div class="container">
+                <hr>
+                <section class="py-3 bg-light">
+                    <div class=" container">
                         <div class="row">
                             <div class="col-lg-9 col-md-8">
                                 <h2 class="font-weight-bold mb-0">Diario mural</h2>
                             </div>
                             <div class="col-lg-3 col-md-4 d-flex">
-                                <button class="btn btn-primary w-100 align-self-center">Publicar</button>
+                                <button class="btn btn-primary w-100 align-self-center" data-toggle="modal"
+                                    data-target="#publicar">Publicar</button>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <section>
+                <section class="py-0 my-0">
                     <div class="container">
                         <div class="row">
+                            <div class="col-lg-12 col-md-12">
+                                <table class="table table-striped">
+                                    <tr>
+                                        <th class="col-lg-3 col-md-2">Nombre</th>
+                                        <th class="col-lg-2 col-md-1">Tipo</th>
+                                        <th class="col-lg-2 col-md-1">Fecha</th>
+                                        <th>Descripcion</th>
+                                        <th class="col-lg-1 col-md-1">Accion</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Francisco Gonzalez</th>
+                                        <th>anuncio</th>
+                                        <th>11/11/2022</th>
+                                        <th>busco novia</th>
+                                        <th class="d-flex justify-content-end px-0">
+
+                                            <button type="button" class="btn btn-primary mx-1"><i
+                                                    class="fa-solid fa-book"></i></button>
+                                            <button type="button" class="btn btn-primary"><i
+                                                    class="fa-solid fa-trash"></i></button>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>Francisco Gonzalez</th>
+                                        <th>anuncio</th>
+                                        <th>11/11/2022</th>
+                                        <th>busco novia</th>
+                                        <th class="d-flex justify-content-end px-0">
+
+                                            <button type="button" class="btn btn-primary mx-1"><i
+                                                    class="fa-solid fa-book"></i></button>
+                                            <button type="button" class="btn btn-primary"><i
+                                                    class="fa-solid fa-trash"></i></button>
+                                        </th>
+                                    </tr>
+                                    </td>
+
+                                </table>
+
+                            </div>
 
                         </div>
                     </div>
@@ -57,6 +98,69 @@
         </div>
 
 
+    </div>
+
+    <!-- Modal publicar -->
+    <div class="modal fade bd-example-modal-lg" id="publicar">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="font-weight-bold mb-0">Formulario</h2>
+                    <button type="button" class="btn btn-primary" id="cerrarFormulario" class="close"
+                        data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label>Nombre</label>
+                            <input type="text" class="form-control" name="titulo" required>
+
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-lg-6 col-md-6">
+                                <label>Tipo de anuncio</label>
+                                <select class="form form-control" name="estado" required>
+                                    <option value="1">Publicidad</option>
+                                    <option value="2">Solicitud</option>
+                                    <option value="3">Otro</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-lg-6 col-md-6">
+                                <label>Fecha</label>
+                                <input type="text" id="datepicker" class="form-control" name="fecha" required>
+
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label>Descripción</label>
+                            <textarea name="textarea" rows="10" cols="50" class="form-control" name="descripcion"
+                                required></textarea>
+
+                        </div>
+
+
+                        <div class="row mx-5">
+
+                            <div class="form-group col-lg-12 col-md-12">
+
+                                <button type="submit" class="btn btn-primary col-lg-9  col-md-9">Subir</button>
+
+                                <button type="reset" class="btn btn-primary col-lg-2  col-md-2"><i
+                                        class="fa-solid fa-trash"></i></button>
+
+                            </div>
+
+
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Optional JavaScript -->
@@ -72,6 +176,12 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"
         integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
+
+    <!-- Font awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
+        integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 </body>
 
 </html>
