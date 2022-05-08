@@ -68,7 +68,7 @@
                                     <?php if($consultaFormulario): foreach($consultaFormulario as $row): ?>
 
                                     <tr>
-                                        <td><?php echo $row['usuario_clave']?> </td>
+                                        <td><?php echo $row['usuario_nombre']?> </td>
                                         <td><?php echo $row['tipo_form_clave']?> </td>
                                         <td><?php echo $row['form_fecha']?></td>
                                         <td><?php echo $row['form_descripcion']?></td>
@@ -82,6 +82,7 @@
                                     </tr>
 
                                     <?php endforeach; endif ?>
+
                                 </table>
 
                             </div>
