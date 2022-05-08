@@ -72,12 +72,17 @@
                                         <td><?php echo $row['tipo_form_clave']?> </td>
                                         <td><?php echo $row['form_fecha']?></td>
                                         <td><?php echo $row['form_descripcion']?></td>
+
                                         <td class="d-flex justify-content-end px-0">
 
                                             <button type="button" class="btn btn-primary mx-1"><i
                                                     class="fa-solid fa-book"></i></button>
-                                            <button type="button" class="btn btn-primary"><i
-                                                    class="fa-solid fa-trash"></i></button>
+
+
+                                            <a class="btn btn-primary"
+                                                href="../controlador/eliminar_diariomural.php?id=<?php echo $row['form_clave']?>"><i
+                                                    class="fa-solid fa-trash"></i></a>
+
                                         </td>
                                     </tr>
 
@@ -110,43 +115,41 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <label>Nombre</label>
-                            <input type="text" class="form-control" name="titulo" required>
-
-                        </div>
+                    <form action="../controlador/publicar_diariomural.php" method="POST">
                         <div class="row">
                             <div class="form-group col-lg-6 col-md-6">
+
                                 <label>Tipo de anuncio</label>
-                                <select class="form form-control" name="estado" required>
+                                <select class="form form-control" name="tipo_anuncio" required>
                                     <option value="1">Publicidad</option>
                                     <option value="2">Solicitud</option>
                                     <option value="3">Otro</option>
                                 </select>
                             </div>
+
                             <div class="form-group col-lg-6 col-md-6">
                                 <label>Fecha</label>
                                 <input type="text" id="datepicker" class="form-control" name="fecha" required>
-
                             </div>
 
                         </div>
 
                         <div class="form-group">
-                            <label>Descripción</label>
-                            <textarea name="textarea" rows="10" cols="50" class="form-control" name="descripcion"
-                                required></textarea>
+                            <label>Titulo</label>
+                            <input type="text" class="form-control" name="titulo" required>
 
                         </div>
+                        <div class="form-group">
+                            <label>Descripción</label>
+                            <textarea rows="10" cols="50" class="form-control" name="descripcion" required></textarea>
 
+                        </div>
 
                         <div class="row mx-5">
 
                             <div class="form-group col-lg-12 col-md-12">
 
                                 <button type="submit" class="btn btn-primary col-lg-9  col-md-9">Subir</button>
-
                                 <button type="reset" class="btn btn-primary col-lg-2  col-md-2"><i
                                         class="fa-solid fa-trash"></i></button>
 
@@ -174,6 +177,15 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"
         integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
+
+    <!--  datePicker -->
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+    <script>
+    $('#datepicker').datepicker({
+        uiLibrary: 'bootstrap4'
+    });
+    </script>
+
 
     <!-- Font awesome -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
