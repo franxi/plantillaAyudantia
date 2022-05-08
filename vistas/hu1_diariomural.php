@@ -3,11 +3,12 @@
 <!-- fin head -->
 
 <body>
+
     <div class="d-flex" id="content-wrapper">
-    
+
         <!-- sideBar -->
-           <?php include('../partes/sidebar.php') ?>
-        
+        <?php include('../partes/sidebar.php') ?>
+
         <!-- fin sideBar -->
 
         <div class="w-100">
@@ -22,7 +23,7 @@
                 <section class="bg-light py-3">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-9 col-md-8">
+                            <div class="col-lg-12 col-md-12">
                                 <h1 class="font-weight-bold mb-0">Bienvenido Juan</h1>
                                 <p class="lead text-muted">Revisa la última información del diario mural</p>
                             </div>
@@ -30,16 +31,23 @@
                     </div>
                 </section>
 
-                <section class="bg-mix py-3">
+                <section class="py-3" style="background-color: red;">
                     <div class="container">
-                       
+                        <div class="row">
+                            <div class="col-lg-9 col-md-8">
+                                <h2 class="font-weight-bold mb-0">Diario mural</h2>
+                            </div>
+                            <div class="col-lg-3 col-md-4 d-flex">
+                                <button class="btn btn-primary w-100 align-self-center">Publicar</button>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
                 <section>
                     <div class="container">
                         <div class="row">
-                           
+
                         </div>
                     </div>
                 </section>
@@ -47,7 +55,7 @@
             </div>
 
         </div>
-   
+
 
     </div>
 
@@ -64,36 +72,6 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"
         integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
-    <script>
-    var ctx = document.getElementById('myChart').getContext('2d');
-    var myChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: ['Feb 2020', 'Mar 2020', 'Abr 2020', 'May 2020'],
-            datasets: [{
-                label: 'Nuevos equipos',
-                data: [50, 100, 150, 200],
-                backgroundColor: [
-                    '#12C9E5',
-                    '#12C9E5',
-                    '#12C9E5',
-                    '#111B54'
-                ],
-                maxBarThickness: 30,
-                maxBarLength: 2
-            }]
-        },
-        options: {
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: true
-                    }
-                }]
-            }
-        }
-    });
-    </script>
 </body>
 
 </html>

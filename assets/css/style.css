@@ -2,7 +2,6 @@
     --primary: #111B54;
     --light: #ffffff;
     --grey: #efefef;
-    
 }
 
 body {
@@ -13,6 +12,7 @@ body {
 
 }
 
+
 a:hover {
     text-decoration: none;
 }
@@ -22,6 +22,9 @@ a:hover {
 .bg-light { background-color: var(--light) !important; }
 
 .bg-grey { background-color: var(--grey) !important; }
+
+.bg-red { background-color: var(--red) !important; }
+
 
 .bg-mix { background: linear-gradient(180deg, var(--light) 50%, var(--grey) 0); }
 
