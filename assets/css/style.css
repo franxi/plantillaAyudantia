@@ -12,6 +12,12 @@ body {
   color: var(--primary);
 }
 
+.normal-white {
+  font-family: "Muli", sans-serif;
+  font-weight: 300;
+  color: var(--light);
+}
+
 a:hover {
   text-decoration: none;
 }

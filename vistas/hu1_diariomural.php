@@ -5,6 +5,10 @@
 <?php include('../partes/head.php') ?>
 <!-- fin head -->
 
+<!-- diario mural -->
+<?php include("../controlador/diariomural.php") ?>
+<!-- fin diario mural -->
+
 <body>
 
     <div class="d-flex" id="content-wrapper">
@@ -53,41 +57,31 @@
                         <div class="row">
                             <div class="col-lg-12 col-md-12">
                                 <table class="table table-striped">
-                                    <tr>
-                                        <th class="col-lg-3 col-md-2">Nombre</th>
-                                        <th class="col-lg-2 col-md-1">Tipo</th>
-                                        <th class="col-lg-2 col-md-1">Fecha</th>
-                                        <th>Descripcion</th>
-                                        <th class="col-lg-1 col-md-1">Accion</th>
+                                    <tr class="bg-primary" style="color:white">
+                                        <th class="col-lg-3 col-md-2" scope="col">Nombre</th>
+                                        <th class="col-lg-2 col-md-1" scope="col">Tipo</th>
+                                        <th class="col-lg-2 col-md-1" scope="col">Fecha</th>
+                                        <th class="col-lg-4 col-md-6" scope="col">Descripcion</th>
+                                        <th class="col-lg-1 col-md-2" scope="col">Accion</th>
                                     </tr>
+
+                                    <?php if($consultaFormulario): foreach($consultaFormulario as $row): ?>
+
                                     <tr>
-                                        <th>Francisco Gonzalez</th>
-                                        <th>anuncio</th>
-                                        <th>11/11/2022</th>
-                                        <th>busco novia</th>
-                                        <th class="d-flex justify-content-end px-0">
+                                        <td><?php echo $row['usuario_clave']?> </td>
+                                        <td><?php echo $row['tipo_form_clave']?> </td>
+                                        <td><?php echo $row['form_fecha']?></td>
+                                        <td><?php echo $row['form_descripcion']?></td>
+                                        <td class="d-flex justify-content-end px-0">
 
                                             <button type="button" class="btn btn-primary mx-1"><i
                                                     class="fa-solid fa-book"></i></button>
                                             <button type="button" class="btn btn-primary"><i
                                                     class="fa-solid fa-trash"></i></button>
-                                        </th>
+                                        </td>
                                     </tr>
-                                    <tr>
-                                        <th>Francisco Gonzalez</th>
-                                        <th>anuncio</th>
-                                        <th>11/11/2022</th>
-                                        <th>busco novia</th>
-                                        <th class="d-flex justify-content-end px-0">
 
-                                            <button type="button" class="btn btn-primary mx-1"><i
-                                                    class="fa-solid fa-book"></i></button>
-                                            <button type="button" class="btn btn-primary"><i
-                                                    class="fa-solid fa-trash"></i></button>
-                                        </th>
-                                    </tr>
-                                    </td>
-
+                                    <?php endforeach; endif ?>
                                 </table>
 
                             </div>
