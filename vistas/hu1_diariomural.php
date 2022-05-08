@@ -1,3 +1,6 @@
+<!-- conexion bds -->
+<?php include("../bds/conexion.php")?>
+<!-- fin conexion bds -->
 <!-- head -->
 <?php include('../partes/head.php') ?>
 <!-- fin head -->
