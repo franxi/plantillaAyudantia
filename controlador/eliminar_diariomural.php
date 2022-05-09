@@ -3,7 +3,6 @@
    require_once("../bds/conexion.php");
 
   $eliminar = $_GET["id"]; 
-
   $eliminarPublicacion_diariomuralSql = "DELETE FROM `formulario` WHERE form_clave = $eliminar";
   
   $eliminarPublicacion_diariomural = mysqli_query($con,$eliminarPublicacion_diariomuralSql);
