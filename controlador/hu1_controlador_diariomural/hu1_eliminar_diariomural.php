@@ -1,6 +1,6 @@
 <?php 
 
-   require_once("../bds/conexion.php");
+   require_once("/xampp/htdocs/plantillaAyudantia/plantillaAyudantia/bds/conexion.php");
 
   $eliminar = $_GET["id"]; 
   $eliminarPublicacion_diariomuralSql = "DELETE FROM `formulario` WHERE form_clave = $eliminar";

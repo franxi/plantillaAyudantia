@@ -5,8 +5,8 @@
 <?php include('../partes/head.php') ?>
 <!-- fin head -->
 
-<!-- diario mural -->
-<?php include("../controlador/diariomural.php") ?>
+<!-- mostrar diario mural -->
+<?php include("../controlador/hu1_controlador_diariomural/hu1_mostrar_diariomural.php") ?>
 <!-- fin diario mural -->
 
 <body>
@@ -31,7 +31,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12 col-md-12">
-                                <h1 class="font-weight-bold mb-0">Bienvenido Juan</h1>
+                                <h1 class="font-weight-bold mb-0">Bienvenido</h1>
                                 <p class="lead text-muted">Revisa la última información del diario mural</p>
                             </div>
                         </div>
@@ -83,9 +83,8 @@
                                                 data-target="#modificar_publicacion<?php echo $row['form_clave'];?>">
                                                 <i class="fa-solid fa-book"></i></button>
 
-
                                             <a class="btn btn-primary"
-                                                href="../controlador/eliminar_diariomural.php?id=<?php echo $row['form_clave'];?>"><i
+                                                href="../controlador/hu1_controlador_diariomural/hu1_eliminar_diariomural.php?id=<?php echo $row['form_clave'];?>"><i
                                                     class="fa-solid fa-trash"></i></a>
 
                                         </td>
@@ -93,7 +92,7 @@
 
                                     <!-- Modal actulizar publicacion -->
 
-                                    <?php include("../partes/modales_diariomural/modal_modificar_publicacion.php") ;?>
+                                    <?php include("../partes/hu1_modales_diariomural/modal_modificar_publicacion.php") ;?>
 
 
 
@@ -114,7 +113,7 @@
     </div>
     <!-- Modal publicar -->
 
-    <?php include("../partes/modales_diariomural/modal_publicar.php") ?>
+    <?php include("../partes/hu1_modales_diariomural/modal_publicar.php") ?>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

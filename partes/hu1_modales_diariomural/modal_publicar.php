@@ -11,7 +11,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="../controlador/publicar_diariomural.php" method="POST">
+                    <form action="../controlador/hu1_controlador_diariomural/hu1_publicar_diariomural.php" method="POST">
                         <div class="row">
                             <div class="form-group col-lg-6 col-md-6">
 

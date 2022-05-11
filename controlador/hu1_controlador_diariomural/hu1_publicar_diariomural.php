@@ -1,6 +1,6 @@
 <?php
 
-require_once("../bds/conexion.php");
+require_once("/xampp/htdocs/plantillaAyudantia/plantillaAyudantia/bds/conexion.php");
 
 $tipo_anuncio = $_POST["tipo_anuncio"];
 $fecha = $_POST["fecha"];

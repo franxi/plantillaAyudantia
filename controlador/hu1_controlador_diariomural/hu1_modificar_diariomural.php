@@ -1,16 +1,12 @@
 <?php 
 
-   require_once("../bds/conexion.php");
-
+require_once("/xampp/htdocs/plantillaAyudantia/plantillaAyudantia/bds/conexion.php");
    $form_clave =  $_POST["form_clave"];
    $tipo_anuncio = $_POST["tipo_anuncio_actualizar"];
    $fecha = $_POST["fecha_actualizar"];
    $titulo = $_POST["titulo_actualizar"];
    $descripcion = $_POST["descripcion_actualizar"];
  
-
-
-
    $modificarPublicacion_diariomuralSql = "UPDATE `formulario` 
    SET tipo_form_clave = '$tipo_anuncio', form_titulo = '$titulo',  form_fecha = '$fecha', form_descripcion = '$descripcion'
    WHERE form_clave = '$form_clave' ";
